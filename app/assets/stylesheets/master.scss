@@ -4,13 +4,21 @@ body {
   background: image_url('food.png');
   /* Note: Font stacks on CSS-tricks.com seem categorically incorrect.
   Helvetica is a neo-grotesque sans-serif, which is not very similar to a humanist sans-serif like Gill Sans or a geometric sans-serif like Frutiger. Thus I have written my own stack for neo-grotesque sans-serifs: */
-  font-family: "Helvetica Neue", Helvetica, "Roboto", "San Francisco", Arial, Univers, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Roboto, "San Francisco", Arial, Univers, sans-serif;
 }
 
 .navbar {
   background: image_url('cartographer.png');
   box-shadow: 0px 1px 2px rgba(0,0,0,0.5);
 
+}
+
+.navbar-inverse .navbar-brand {
+  color: #fac564;
+  font-family: 'giant_head_otregular', serif;
+  font-size: 56px;
+  line-height: 56px;
+  letter-spacing: 2px;
 }
 
 .booyah-box {
