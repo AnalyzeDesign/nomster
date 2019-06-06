@@ -1,8 +1,7 @@
 
-<% for place in @places %>
-
+<% @places.each_with_index do |place, index| %>
   <div class="booyah-box col-10 offset-1">
-    <h1><sup></sup><%= place.name %></h1><br />
+    <h1><%= place.name %></h1><br />
     <i><%= place.address %></i><br /><br />
     <p><%= place.description %></p><br />
   </div>
