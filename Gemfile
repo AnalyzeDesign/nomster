@@ -82,3 +82,6 @@ gem 'kaminari'
 
 # Add simple_form
 gem 'simple_form'
+
+# Add font awesome gem
+gem 'font-awesome-rails'
