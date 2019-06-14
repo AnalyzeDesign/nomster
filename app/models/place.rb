@@ -1,4 +1,5 @@
 class Place < ApplicationRecord
   belongs_to :user
-  validates :name, presence: true
+  validates :description, :address, presence: true
+  validates :name, presence: true, length: { minimum: 3 }
 end
