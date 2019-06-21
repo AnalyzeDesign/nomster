@@ -88,3 +88,9 @@ gem 'font-awesome-rails'
 
 # Add devise gem (authentication)
 gem 'devise'
+
+# Add geocoder
+gem 'geocoder'
+
+# Add figaro
+gem 'figaro'
