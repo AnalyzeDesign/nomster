@@ -1,10 +1,7 @@
 module ApplicationHelper
 
-  def meta_tag(tag, text)
-    content_for :"meta_#{tag}", text
+  def meta_tag_viewport
+    @tag_text = "<meta name='viewport' content='width=device-width,initial-scale=1,user-scalable=no'>"
   end
 
-  def yield_meta_tag(tag, default_text='')
-    content_for?(:"meta_#{tag}") ? content_for(:"meta_#{tag}") : default_text
-  end
 end
