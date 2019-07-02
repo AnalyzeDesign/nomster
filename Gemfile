@@ -94,3 +94,6 @@ gem 'geocoder'
 
 # Add figaro
 gem 'figaro'
+
+# Add carrierwave
+gem 'carrierwave', '>= 2.0.0.rc', '< 3.0'

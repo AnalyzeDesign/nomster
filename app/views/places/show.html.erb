@@ -57,14 +57,59 @@
 </div>
 <div class="clear"></div>
 
+<!-- Photos -->
+<div class="col-10 offset-1"
+  <h1 class="float-left">Photos</h1>
+  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#photosModal">
+    Add a Photo
+  </button>
+</div>
+<div class="clear"></div>
+<div class="modal fade" id="photosModal" tabindex="-1" role="dialog" aria-labelledby="photosModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="photosModalLabel">Add a photo</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <%= simple_form_for @photo, url: place_photos_path(@place) do |f| %>
+        <div class="modal-body">
+            <%= f.input :picture %>
+            <%= f.input :caption %>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <%= f.submit "Add a Photo", class: 'btn btn-primary' %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <% @place.photos.each do |photo| %>
+    <div class="col-12 col-sm-6">
+
+        <% if photo.present? %>
+        <strong><%= image_tag photo.picture.url %></strong>
+        <% end %>
+        <%= photo.caption %>
+
+    </div>
+  <% end %>
+</div>
+
+<div class="clear"></div>
+
+<!-- Comments -->
 <div class="col-10 offset-1"
   <h1 class="float-left">Comments</h1>
-
   <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
     Add a comment
   </button>
 </div>
-
 <div class="clear"></div>
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
